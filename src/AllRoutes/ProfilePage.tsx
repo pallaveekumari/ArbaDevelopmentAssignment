@@ -13,11 +13,12 @@ const ProfilePage = () => {
   return (
     <div>
       <Navbar />
+      <h1>My Profile</h1>
       <div>
         <div className={styles.boxes}>
           <img
             className={styles.imagebox}
-            src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
+            src="https://newprofilepic2.photo-cdn.net//assets/images/article/profile.jpg"
             alt=""
           />
           <p>user1</p>

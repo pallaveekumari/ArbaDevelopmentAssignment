@@ -22,7 +22,7 @@ const AllProductPage = () => {
   return (
     <div>
       <Navbar />
-
+<h1>All Products</h1>
       <div className={styles.productsContainer}>
         {data?.map((el: any, i: any) => {
           return (

@@ -31,7 +31,7 @@ const CartPage = () => {
   return (
     <div>
         <Navbar/>
-        
+        <h1>My Cart</h1>
     <div className={styles.productsContainer}>
       {cartdata.map((el: any) => {
         return (

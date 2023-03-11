@@ -36,6 +36,7 @@ const HomePage = () => {
   return (
     <div>
       <Navbar />
+      <h1>Home</h1>
       <div>
         {
           <DialogBox isOpen={isOpen} onClose={(e: any) => setIsOpen(false)}>

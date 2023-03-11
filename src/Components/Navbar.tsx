@@ -38,7 +38,7 @@ console.log(cartdata)
           <img
             onClick={handleToggle}
             className={`${styles.link} ${styles.profile}`}
-            src="https://picsum.photos/id/242/200/300"
+            src="https://newprofilepic2.photo-cdn.net//assets/images/article/profile.jpg"
             alt=""
           />
           <div

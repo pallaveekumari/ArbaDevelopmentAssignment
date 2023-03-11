@@ -5,6 +5,7 @@ const CodingChallengePage = () => {
   return (
     <div>
         <Navbar/>
+        <h1>Coding Challenge</h1>
     </div>
   )
 }

@@ -5,6 +5,7 @@ const initialdata = {
   isLoading: true,
   isError: false,
   cartdata: [],
+  homepageData:[]
 };
 
 export const reducer = (state = initialdata, action: any) => {
@@ -74,6 +75,14 @@ export const reducer = (state = initialdata, action: any) => {
         isError: true,
         isLoading: false,
       };
+
+      case types.HOMEPAGE_DATA_SUCCESS:
+        return {
+            ...state,
+            isLoading:false,
+            isError:false,
+            homepageData:payload
+        }
     default:
       return state;
   }

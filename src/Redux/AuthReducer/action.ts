@@ -1,27 +1,25 @@
+import * as types from "../AuthReducer/actionTypes";
 
-import * as types from "../AuthReducer/actionTypes"
+export const login = (payload: any) =>  (dispatch: any) => {
+  dispatch({ type: types.LOGIN__REQUEST });
 
-export const login =(payload:any)=>async(dispatch:any)=>{
-   
-
-    
-dispatch({type:types.LOGIN__REQUEST})
-
-return fetch("https://fakestoreapi.com/auth/login",{
-    method:"POST",
-    headers:{
-        "contentType":"application/json"
-        // "mode":"no-cors"
+  return fetch("https://fakestoreapi.com/auth/login", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+      
     },
-    body:JSON.stringify(payload)
-})
-.then((res)=>{
-    console.log(res)
-    dispatch({type:types.LOGIN__SUCEESS,payload:res.token})
-})
-.catch((err)=>{
-    console.log(err)
-    dispatch({type:types.LOGIN__FAILURE})
-})
-
-}
+    body: JSON.stringify(payload),
+  })
+    .then((res) => {
+      return res.json();
+    })
+    .then((res) => {
+      console.log(res);
+      dispatch({ type: types.LOGIN__SUCEESS, payload: res });
+    })
+    .catch((err) => {
+      console.log(err);
+      dispatch({ type: types.LOGIN__FAILURE });
+    });
+};

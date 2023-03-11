@@ -26,7 +26,7 @@ export const reducer=(state=initialdata,action:any)=>
                 ...state,
                 isLoading:false,
                 isAuth:true,
-                token:payload,
+                token:payload.token,
                 isError:false
             }
 

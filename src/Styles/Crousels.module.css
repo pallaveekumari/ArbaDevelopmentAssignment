@@ -1,0 +1,64 @@
+.carouselholder {
+    border:1px solid red;
+    justify-content: center;
+    display: flex;
+}
+    .left {
+      width:25px;    
+      background-color:yellow;
+      display:flex;
+      align-items:center;
+    }
+      .leftbtn {
+        width:25px;
+        height:25px;
+        background:green;
+      
+    }
+    .right {
+      width:25px;
+      background-color:yellow;
+      display:flex;
+      align-items:center;
+    }
+      .rightbtn {
+        width:25px;
+        height:25px;
+        background:green;
+      }
+    
+    .carouselframe {
+      background-color:orange;
+      width:300px;
+      height:150px;
+      border:1px green solid;
+      overflow:hidden;
+    }
+      .carousel {
+        display: flex;
+      }
+        .slide {
+          width:300px;
+          height:150px;
+          flex-shrink:0;
+          outline:2px solid purple;
+        }
+      
+    
+  
+  .indicators {  
+    margin-top:5px;
+    display:flex;
+    justify-content: center;
+    gap:5px;
+  }
+    .indicator {
+      width:20px;
+      height:20px;
+      background: gold;
+      border-radius:10px;
+    }
+    .active {
+      background:red;
+    }
+  

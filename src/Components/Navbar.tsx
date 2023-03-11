@@ -57,7 +57,7 @@ console.log(cartdata)
                 localStorage.removeItem("token")
                 navigate("/login")
             }}>Logout</p>
-            <p>Profile</p>
+          <Link to="/profile">  <p>Profile</p></Link>
             <p>Code Challenge</p>
           </div>
         </div>

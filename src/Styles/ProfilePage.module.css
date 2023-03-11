@@ -1,0 +1,37 @@
+.imagebox{
+    height: 10rem;
+    width: 10rem;
+}
+.addToCartBtn{
+   
+      width: 200px;
+  
+   
+      box-sizing: border-box;
+      color: white;
+      background-color: #00abc5;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 20px;
+      font-weight: 700;
+    
+      
+      height: 3rem;
+      justify-content: space-around;
+      align-items: center;
+ 
+  }
+  .tncBtn{
+    width: 7rem;
+    height: 3rem;
+    background-color: #00abc5;
+    border: none;
+    border-radius: 7px;
+    color: white;
+    margin-right: 2rem;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+}
+  

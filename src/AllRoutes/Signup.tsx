@@ -53,7 +53,7 @@ const Signup = () => {
             placeholder="Confirm password"
           />
           <button className={styles.loginbutton} onClick={handleSubmit}>
-            Signup
+            Register
           </button>
           <p>
             Already have an account?{" "}

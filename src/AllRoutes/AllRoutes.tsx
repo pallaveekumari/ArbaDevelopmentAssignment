@@ -9,6 +9,7 @@ import CodingChallengePage from './CodingChallengePage'
 import HomePage from './HomePage'
 import ProductHomePage from './ProductHomePage'
 import ProfilePage from './ProfilePage'
+import PrivateRoutes from './PrivateRoutes'
 const AllRoutes = () => {
   return (
    <Routes>
@@ -18,7 +19,7 @@ const AllRoutes = () => {
     <Route path="/cartpage" element={<CartPage/>}/>
     <Route path="/allproduct" element={<AllProductPage/>}/>
     <Route path="/coding" element={<CodingChallengePage/>}/>
-    <Route path="/" element={<HomePage/>}/>
+    {/* <Route path="/" element={<PrivateRoutes><HomePage/></PrivateRoutes>}/> */}
     <Route path="/product" element={<ProductHomePage/>}/>
     <Route path="/profile" element={<ProfilePage/>}/>
   

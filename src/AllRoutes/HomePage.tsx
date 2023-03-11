@@ -3,12 +3,13 @@ import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import DialogBox from "../Components/DialogBox";
 import Navbar from "../Components/Navbar";
-import { getData } from "../Redux/AppReducer/action";
+import { getData, handleAddToCart } from "../Redux/AppReducer/action";
 import { store } from "../Redux/store";
 import styles from "../Styles/HomePage.module.css";
 
 const HomePage = () => {
   const data = useSelector((store: any) => store.AppReducer.data);
+
   const dispatch = useDispatch();
 
   console.log(data)
@@ -31,7 +32,11 @@ const HomePage = () => {
                 <p className={styles.category}>{el.category}</p>
                 <p className={styles.price}>RS {el.price}</p>
                 <div className={styles.btnBox}>
-                  <button className={styles.addToCartBtn}>Add to cart</button>
+                  <button className={styles.addToCartBtn}
+               onClick={()=>{
+               dispatch<any>(handleAddToCart(el))
+                alert("Item added to your cart!")
+               }}>Add to cart</button>
                 </div>
               </div>
             </div>

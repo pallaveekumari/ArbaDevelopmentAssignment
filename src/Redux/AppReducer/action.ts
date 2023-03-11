@@ -1,5 +1,7 @@
 import * as types from "../AppReducer/actionTypes"
 
+
+
 export const getData=()=>(dispatch:any)=>{
 
     dispatch({type:types.GET_DATA_REQUEST})
@@ -16,4 +18,10 @@ export const getData=()=>(dispatch:any)=>{
     })
 }
 
+
+export const handleAddToCart=(data:any)=>(dispatch:any)=>{
+dispatch({type:types.ADD_TO_CART_REQUEST})
+dispatch({type:types.ADD_TO_CART_REQUEST,payload:data})
+dispatch({type:types.ADD_TO_CART_FAILURE})
+}
 

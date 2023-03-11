@@ -11,7 +11,7 @@ const [username,setUsername]=useState<string>("")
 const [password,setPassword]=useState<string>("")
 
 const dispatch=useDispatch()
-const navigate=useNavigate()
+// const navigate=useNavigate()
 
 const handleSubmit=():any=>{
 dispatch<any>(login({username,password})).then((res:any)=>{

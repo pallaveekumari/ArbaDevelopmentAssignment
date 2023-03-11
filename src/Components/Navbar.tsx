@@ -1,9 +1,12 @@
 import { useState } from "react";
+import { useSelector } from "react-redux";
 import styles from "../Styles/Navbar.module.css";
 
 const Navbar = () => {
   const [bool, setBool] = useState<boolean>(false);
 
+  const cartdata= useSelector((store:any)=>store.AppReducer.cartdata)
+console.log(cartdata)
   const handleToggle = (): void => {
     setBool(!bool);
   };
@@ -24,7 +27,7 @@ const Navbar = () => {
             src="https://www.iconpacks.net/icons/3/free-green-shopping-cart-icon-10909-thumb.png"
             alt=""
           />
-          <div className={styles.cartItemCount}>5</div>
+          <div className={styles.cartItemCount}>{cartdata.length}</div>
         </div>
         <div className={styles.dropdown}>
           <img

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import DialogBox from "../Components/DialogBox";
@@ -8,11 +8,12 @@ import { store } from "../Redux/store";
 import styles from "../Styles/HomePage.module.css";
 
 const HomePage = () => {
+    const [cartBtnToggle,setCartBtnToggle]=useState<boolean>(false)
   const data = useSelector((store: any) => store.AppReducer.data);
 
   const dispatch = useDispatch();
 
-  console.log(data)
+  console.log(data);
 
   useEffect(() => {
     dispatch<any>(getData());
@@ -32,11 +33,15 @@ const HomePage = () => {
                 <p className={styles.category}>{el.category}</p>
                 <p className={styles.price}>RS {el.price}</p>
                 <div className={styles.btnBox}>
-                  <button className={styles.addToCartBtn}
-               onClick={()=>{
-               dispatch<any>(handleAddToCart(el))
-                alert("Item added to your cart!")
-               }}>Add to cart</button>
+                  <button
+                    className={styles.addToCartBtn}
+                    onClick={() => {
+                      dispatch<any>(handleAddToCart(el));
+                      alert("Item added to your cart!");
+                    }}
+                  >
+                    Add to cart
+                  </button>
                 </div>
               </div>
             </div>

@@ -69,3 +69,36 @@
   .category{
       color: gray;
   }
+
+  .addToCartBtn{
+    display: flex;
+      width: 90%;
+      margin: auto;
+      padding: 1rem 0;
+      box-sizing: border-box;
+      color: white;
+      background-color: #00abc5;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 20px;
+      font-weight: 700;
+      position: absolute;
+      bottom: 5%;
+      height: 4rem;
+      justify-content: space-around;
+      align-items: center;
+  }
+  .addToCartBtn>p{
+font-size: 30px;
+font-weight: 700;
+color: white;
+  }
+  .addToCartBtn>button{
+    background: none;
+    border: none;
+    font-size: 30px;
+    font-weight: 700;
+    color: white;
+    cursor: pointer;
+  }

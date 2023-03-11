@@ -55,8 +55,22 @@
       position: absolute;
       bottom: 5%;
       height: 4rem;
+      justify-content: space-around;
+      align-items: center;
   }
-  
+  .addToCartBtn>p{
+font-size: 30px;
+font-weight: 700;
+color: white;
+  }
+  .addToCartBtn>button{
+    background: none;
+    border: none;
+    font-size: 30px;
+    font-weight: 700;
+    color: white;
+    cursor: pointer;
+  }
   .price{
       font-size: 20px;
       color: #83c0bd;

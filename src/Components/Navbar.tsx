@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 import styles from "../Styles/Navbar.module.css";
 
 const Navbar = () => {
@@ -14,11 +15,13 @@ console.log(cartdata)
   return (
     <div className={styles.header}>
       <div className={styles.leftBox}>
+        <Link to="/">
         <img
           className={styles.logo}
           src="https://images.squarespace-cdn.com/content/v1/5e185abfc76307064fbf9623/1601657483135-2RZDLSDC83SZMJLWK1AY/Large+ArBa+Logo+2.PNG"
           alt=""
         />
+        </Link>
       </div>
       <div className={styles.rightBox}>
         <div className={styles.cartBox}>
@@ -27,7 +30,9 @@ console.log(cartdata)
             src="https://www.iconpacks.net/icons/3/free-green-shopping-cart-icon-10909-thumb.png"
             alt=""
           />
+          <Link to="/cartpage">
           <div className={styles.cartItemCount}>{cartdata.length}</div>
+          </Link>
         </div>
         <div className={styles.dropdown}>
           <img

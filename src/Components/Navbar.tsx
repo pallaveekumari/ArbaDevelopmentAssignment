@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import styles from "../Styles/Navbar.module.css";
 
 const Navbar = () => {
   const [bool, setBool] = useState<boolean>(false);
-
+const navigate=useNavigate()
   const cartdata= useSelector((store:any)=>store.AppReducer.cartdata)
 console.log(cartdata)
   const handleToggle = (): void => {
@@ -53,7 +53,10 @@ console.log(cartdata)
             }
             className={styles.dropdownMenu}
           >
-            <p>Logout</p>
+            <p onClick={()=>{
+                localStorage.removeItem("token")
+                navigate("/login")
+            }}>Logout</p>
             <p>Profile</p>
             <p>Code Challenge</p>
           </div>

@@ -12,14 +12,19 @@ export const login = (payload: any) =>  (dispatch: any) => {
     body: JSON.stringify(payload),
   })
     .then((res) => {
+        console.log(res)
       return res.json();
     })
     .then((res) => {
-      console.log(res);
+    //   console.log(res);
+      localStorage.setItem("token",JSON.stringify(res.token))
       dispatch({ type: types.LOGIN__SUCEESS, payload: res });
+
     })
     .catch((err) => {
       console.log(err);
+
       dispatch({ type: types.LOGIN__FAILURE });
+      
     });
 };

@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 import DialogBox from "../Components/DialogBox";
 import Navbar from "../Components/Navbar";
 import { getData, handleAddToCart } from "../Redux/AppReducer/action";
-import { store } from "../Redux/store";
+
 import styles from "../Styles/HomePage.module.css";
 
 const HomePage = () => {

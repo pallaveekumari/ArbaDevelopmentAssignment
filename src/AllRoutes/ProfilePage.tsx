@@ -4,7 +4,6 @@ import Navbar from "../Components/Navbar";
 import styles from "../Styles/ProfilePage.module.css";
 const ProfilePage = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
-  const [terms, setTerms] = useState<any>(false);
 
   const acceptTermsSubmit = (): void => {
     localStorage.setItem("terms", JSON.stringify(true));

@@ -1,11 +1,22 @@
 import * as types from "../AppReducer/actionTypes";
 
-const initialdata = {
+type init = {
+  data: any;
+  isLoading: any;
+  isError: any;
+  homepageData: any;
+  cartdata: any;
+};
+
+const initialdata: init = {
   data: [],
   isLoading: true,
   isError: false,
-  cartdata: [],
-  homepageData:[]
+  cartdata: localStorage.getItem("cartitem")
+    ? JSON.parse(localStorage.getItem("cartitem")!)
+    : [],
+
+  homepageData: [],
 };
 
 export const reducer = (state = initialdata, action: any) => {
@@ -41,11 +52,13 @@ export const reducer = (state = initialdata, action: any) => {
       };
 
     case types.ADD_TO_CART_SUCCESS:
+      let updatedcartdata = [...state.cartdata, payload];
+      localStorage.setItem("cartitem", JSON.stringify(updatedcartdata));
       return {
         ...state,
         isLoading: false,
         isError: false,
-        cartdata: [...state.cartdata, payload],
+        cartdata: updatedcartdata,
       };
 
     case types.ADD_TO_CART_FAILURE:
@@ -76,13 +89,13 @@ export const reducer = (state = initialdata, action: any) => {
         isLoading: false,
       };
 
-      case types.HOMEPAGE_DATA_SUCCESS:
-        return {
-            ...state,
-            isLoading:false,
-            isError:false,
-            homepageData:payload
-        }
+    case types.HOMEPAGE_DATA_SUCCESS:
+      return {
+        ...state,
+        isLoading: false,
+        isError: false,
+        homepageData: payload,
+      };
     default:
       return state;
   }

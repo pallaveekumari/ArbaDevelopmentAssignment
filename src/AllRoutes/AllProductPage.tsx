@@ -8,17 +8,13 @@ import { getData, handleAddToCart } from "../Redux/AppReducer/action";
 import styles from "../Styles/AllProductPage.module.css";
 
 const AllProductPage = () => {
-    const [cartBtnToggle,setCartBtnToggle]=useState<boolean>(false)
   const data = useSelector((store: any) => store.AppReducer.data);
-const cartdata=useSelector((store:any)=>store.AppReducer.cartdata)
+  const cartdata = useSelector((store: any) => store.AppReducer.cartdata);
   const dispatch = useDispatch();
-
-  console.log(data);
 
   useEffect(() => {
     dispatch<any>(getData());
   }, []);
-
 
   const handlefilter = (id: any): boolean => {
     let updateddata = cartdata.filter((el: any) => {
@@ -31,11 +27,10 @@ const cartdata=useSelector((store:any)=>store.AppReducer.cartdata)
     }
   };
 
-
   return (
     <div>
       <Navbar />
-<h1>All Products</h1>
+      <h1>All Products</h1>
       <div className={styles.productsContainer}>
         {data?.map((el: any, i: any) => {
           return (
@@ -49,16 +44,12 @@ const cartdata=useSelector((store:any)=>store.AppReducer.cartdata)
                   <button
                     className={styles.addToCartBtn}
                     onClick={() => {
-                      if(handlefilter(el.id))
-                      {
+                      if (handlefilter(el.id)) {
                         dispatch<any>(handleAddToCart(el));
                         alert("Item added to your cart!");
+                      } else {
+                        alert("Item already exist in your cart");
                       }
-                      else
-                      {
-                        alert("Item already exist in your cart")
-                      }
-                     
                     }}
                   >
                     Add to cart

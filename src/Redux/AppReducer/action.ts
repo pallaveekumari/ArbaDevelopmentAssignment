@@ -16,7 +16,6 @@ export const getData = () => (dispatch: any) => {
 };
 
 export const handleAddToCart = (data: any) => (dispatch: any) => {
-  console.log(data);
   dispatch({ type: types.ADD_TO_CART_REQUEST });
   dispatch({ type: types.ADD_TO_CART_SUCCESS, payload: { ...data, qty: 1 } });
   dispatch({ type: types.ADD_TO_CART_FAILURE });

@@ -1,6 +1,6 @@
 import Login from "./Login";
 import Signup from "./Signup";
-import {  Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 
 import CartPage from "./CartPage";
 import AllProductPage from "./AllProductPage";
@@ -12,7 +12,6 @@ import ProfilePage from "./ProfilePage";
 import { PrivateRoute } from "./PrivateRoutes";
 
 const AllRoutes = () => {
-
   return (
     <Routes>
       <Route path="/signup" element={<Signup />} />

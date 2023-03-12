@@ -1,104 +1,98 @@
-.codeBox{
-    height: 20rem;
-    width: 100%;
-    margin: auto;
-    color: white;
-    font-weight: 600;
-    background-color:  #00abc5;
-    line-height: 0.5;
-padding-top: 2rem;
- text-align: center;
+.codeBox {
+  height: 20rem;
+  width: 100%;
+  margin: auto;
+  color: white;
+  font-weight: 600;
+  background-color: #00abc5;
+  line-height: 0.5;
+  padding-top: 2rem;
+  text-align: center;
 }
-.addToCartBtn{
-    width: 200px;
-    margin: auto;
-    padding: 0.5rem 0;
-    box-sizing: border-box;
-    color: white;
-    background-color: #00abc5;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 20px;
-    font-weight: 600;
-   
-    
+.addToCartBtn {
+  width: 200px;
+  margin: auto;
+  padding: 0.5rem 0;
+  box-sizing: border-box;
+  color: white;
+  background-color: #00abc5;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 600;
 }
 
-.databox{
-    height: 5rem;
-    width: 100%;
-    /* border: 1px solid red; */
-    display: flex;
-    margin: auto;
+.databox {
+  height: 5rem;
+  width: 100%;
 
+  display: flex;
+  margin: auto;
 }
-.output{
-    width: 100px;
-   height: 3rem;
-    padding: 0.5rem 0;
-    box-sizing: border-box;
-    color: white;
-    background-color: #00abc5;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 20px;
-    font-weight: 600;
-    margin-top: -0.5rem;
-    
+.output {
+  width: 100px;
+  height: 3rem;
+  padding: 0.5rem 0;
+  box-sizing: border-box;
+  color: white;
+  background-color: #00abc5;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: -0.5rem;
 }
-.NoteBox{
-    height: 12rem;
-    width: 100%;
-    margin: auto;
-    color: white;
-    font-weight: 600;
-    background-color:  #00abc5;
-    line-height: 0.5;
-    padding-top: 1rem;
+.NoteBox {
+  height: 12rem;
+  width: 100%;
+  margin: auto;
+  color: white;
+  font-weight: 600;
+  background-color: #00abc5;
+  line-height: 0.5;
+  padding-top: 1rem;
 }
-.note{
-    text-align: left;
+.note {
+  text-align: left;
 }
-.notemainbox{
-    width: 55%;
-    margin: auto;
-    margin-bottom: 5rem;
+.notemainbox {
+  width: 55%;
+  margin: auto;
+  margin-bottom: 5rem;
 }
-input{
-    height: 2rem;
-    width: 350px;
-    border: none;
-    border-bottom: 1px solid #00abc5;
-    font-size: 15px;
-    
-
+input {
+  height: 2rem;
+  width: 350px;
+  border: none;
+  border-bottom: 1px solid #00abc5;
+  font-size: 15px;
 }
-.inputbox{
-    font-size: 14px;
-    text-align: left;
-    line-height: 0.2;
+.inputbox {
+  font-size: 14px;
+  text-align: left;
+  line-height: 0.2;
 }
-input:focus{
-    border: none;
-    border-bottom: 1px solid green;
+input:focus {
+  border: none;
+  border-bottom: 1px solid green;
 }
-.conatiner{
-    width: 80%;
-    margin: auto;
-    text-align: left;
+.conatiner {
+  width: 80%;
+  margin: auto;
+  text-align: left;
 }
-.collection{
-    width: 50%;
-    margin: auto;
-    text-align: left;
-    margin-top: 3rem;
+.collection {
+  width: 50%;
+  margin: auto;
+  text-align: left;
+  margin-top: 3rem;
 }
-.outputcontainer{
-    width: 50%;
-    margin: auto;
- display: flex;
- flex-direction: column;
- align-items: flex-start; 
+.outputcontainer {
+  width: 50%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }

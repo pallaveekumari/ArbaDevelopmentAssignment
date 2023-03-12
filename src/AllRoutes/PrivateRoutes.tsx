@@ -7,7 +7,6 @@ export const PrivateRoute: React.FC<Props> = ({
   component: RouteComponent,
   path,
 }) => {
-  // console.log(isAuth)
   const isAuthenticated: any = localStorage.getItem("token") != undefined;
   if (isAuthenticated) {
     return <RouteComponent />;

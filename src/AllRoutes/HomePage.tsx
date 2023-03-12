@@ -117,18 +117,12 @@ const HomePage = () => {
                   <button
                     className={styles.addToCartBtn}
                     onClick={() => {
-                      console.log(handlefilter(el.id))
-                      if(handlefilter(el.id))
-                      {
-
+                      if (handlefilter(el.id)) {
                         dispatch<any>(handleAddToCart(el));
                         alert("Item added to your cart!");
+                      } else {
+                        alert("Item already exist in your cart");
                       }
-                      else
-                      {
-                        alert("Item already exist in your cart")
-                      }
-                     
                     }}
                   >
                     Add to cart

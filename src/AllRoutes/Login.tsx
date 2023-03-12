@@ -16,10 +16,10 @@ const Login = () => {
   const handleSubmit = (): any => {
     dispatch<any>(login({ username, password })).then((res: any) => {
       let token = localStorage.getItem("token");
-      console.log(token);
+
       if (token) {
         alert("Login Successfull");
-        console.log("hi");
+
         navigate("/");
       } else {
         alert("login failed");
@@ -58,7 +58,10 @@ const Login = () => {
           </button>
           <p>
             Don't have any account?{" "}
-            <span onClick={()=>navigate("/signup")} style={{ color: "#00abc5" ,cursor:"pointer"}}>
+            <span
+              onClick={() => navigate("/signup")}
+              style={{ color: "#00abc5", cursor: "pointer" }}
+            >
               Sign Up
             </span>
           </p>

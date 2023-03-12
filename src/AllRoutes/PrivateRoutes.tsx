@@ -1,14 +1,30 @@
-import React from "react";
-import { Navigate } from "react-router-dom";
+import React from 'react';
+import { Route, Navigate } from 'react-router-dom';
 
-const PrivateRoutes = ({ children }: any) => {
-  let token = localStorage.getItem("token");
-
-  if (token) {
-    return { children };
-  } else {
-    <Navigate to="/login" />;
-  }
+type PrivateRouteProps = {
+  isAuthenticated: boolean;
+  children: React.ReactNode;
+  path: string;
+  [rest: string]: any;
 };
 
-export default PrivateRoutes;
+const PrivateRoute = ({ isAuthenticated, children, ...rest }: PrivateRouteProps) => {
+  const renderRoute:any = (props: any) => {
+    if (isAuthenticated) {
+      return children;
+    } else {
+      return (
+        <Navigate
+          to={{
+            pathname: '/login',
+            search: `?redirect=${props.location.pathname}`,
+          }}
+        />
+      );
+    }
+  };
+
+  return <Route {...rest} element={renderRoute} />;
+};
+
+export default PrivateRoute;

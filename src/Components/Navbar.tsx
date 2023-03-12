@@ -7,7 +7,7 @@ const Navbar = () => {
   const [bool, setBool] = useState<boolean>(false);
   const navigate = useNavigate();
   const cartdata = useSelector((store: any) => store.AppReducer.cartdata);
-  console.log(cartdata);
+
   const handleToggle = (): void => {
     setBool(!bool);
   };

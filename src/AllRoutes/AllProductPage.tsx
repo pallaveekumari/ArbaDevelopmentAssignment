@@ -10,7 +10,7 @@ import styles from "../Styles/AllProductPage.module.css";
 const AllProductPage = () => {
     const [cartBtnToggle,setCartBtnToggle]=useState<boolean>(false)
   const data = useSelector((store: any) => store.AppReducer.data);
-
+const cartdata=useSelector((store:any)=>store.AppReducer.cartdata)
   const dispatch = useDispatch();
 
   console.log(data);
@@ -18,6 +18,19 @@ const AllProductPage = () => {
   useEffect(() => {
     dispatch<any>(getData());
   }, []);
+
+
+  const handlefilter = (id: any): boolean => {
+    let updateddata = cartdata.filter((el: any) => {
+      return el.id == id;
+    });
+    if (updateddata.length == 0) {
+      return true;
+    } else {
+      return false;
+    }
+  };
+
 
   return (
     <div>
@@ -36,8 +49,16 @@ const AllProductPage = () => {
                   <button
                     className={styles.addToCartBtn}
                     onClick={() => {
-                      dispatch<any>(handleAddToCart(el));
-                      alert("Item added to your cart!");
+                      if(handlefilter(el.id))
+                      {
+                        dispatch<any>(handleAddToCart(el));
+                        alert("Item added to your cart!");
+                      }
+                      else
+                      {
+                        alert("Item already exist in your cart")
+                      }
+                     
                     }}
                   >
                     Add to cart

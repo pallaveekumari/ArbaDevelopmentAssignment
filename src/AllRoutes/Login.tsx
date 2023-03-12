@@ -35,7 +35,9 @@ const Login = () => {
         <div className={styles.loginFormBox}>
           <div className={styles.loginCircle}></div>
           <h2>ARBA DEVELOPMENT STUDIOS</h2>
-          <p>This is arba devlopment website</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab quia
+          </p>
 
           <input
             className={styles.user}
@@ -56,9 +58,9 @@ const Login = () => {
           </button>
           <p>
             Don't have any account?{" "}
-            <Link to="/signup">
-              <span style={{ color: "blue" }}>Sign Up</span>
-            </Link>
+            <span onClick={()=>navigate("/signup")} style={{ color: "#00abc5" ,cursor:"pointer"}}>
+              Sign Up
+            </span>
           </p>
         </div>
       </div>

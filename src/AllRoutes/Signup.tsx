@@ -5,22 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { login } from "../Redux/AuthReducer/action";
 import styles from "../Styles/Signup.module.css";
 const Signup = () => {
-  const [username, setUsername] = useState<string>("");
-
-  const [password, setPassword] = useState<string>("");
   const navigate = useNavigate();
-  const dispatch = useDispatch();
-  const handleSubmit = (): any => {
-    dispatch<any>(login({ username, password })).then((res: any) => {
-      let token = localStorage.getItem("token");
-      if (token) {
-        alert("Signup Successfull");
-        navigate("/");
-      } else {
-        alert("Something went wrong...");
-      }
-    });
-  };
 
   return (
     <div>
@@ -30,36 +15,31 @@ const Signup = () => {
         <div className={styles.loginFormBox}>
           <div className={styles.loginCircle}></div>
           <h2>ARBA DEVELOPMENT STUDIOS</h2>
-          <p>This is arba devlopment website</p>
-          <input
-            className={styles.user}
-            type="text"
-            placeholder="Username"
-            onChange={(e): void => setUsername(e.target.value)}
-            value={username}
-          />
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab quia
+          </p>
+          <input className={styles.user} type="text" placeholder="Username" />
           <input className={styles.user} type="text" placeholder="Fullname" />
           <input className={styles.user} type="text" placeholder="Email" />
           <input
             className={styles.user}
             type="password"
             placeholder="Password"
-            onChange={(e): void => setPassword(e.target.value)}
-            value={password}
           />
           <input
             className={styles.user}
             type="text"
             placeholder="Confirm password"
           />
-          <button className={styles.loginbutton} onClick={handleSubmit}>
-            Register
-          </button>
+          <button className={styles.loginbutton}>Register</button>
           <p>
             Already have an account?{" "}
-            <Link to="/login">
-              <span style={{ color: "blue" }}>Login</span>
-            </Link>
+            <span
+              onClick={() => navigate("/login")}
+              style={{ color: "#00abc5" ,cursor:"pointer"}}
+            >
+              Login
+            </span>
           </p>
         </div>
       </div>

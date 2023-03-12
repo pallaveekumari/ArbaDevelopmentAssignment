@@ -1,19 +1,17 @@
 import Login from "./Login";
 import Signup from "./Signup";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import {  Route, Routes } from "react-router-dom";
 
 import CartPage from "./CartPage";
 import AllProductPage from "./AllProductPage";
 import CodingChallengePage from "./CodingChallengePage";
 import HomePage from "./HomePage";
-import ProductHomePage from "./ProductHomePage";
+
 import ProfilePage from "./ProfilePage";
 
-import { login } from "../Redux/AuthReducer/action";
 import { PrivateRoute } from "./PrivateRoutes";
 
 const AllRoutes = () => {
-  //   console.log(isAuthenticated);
 
   return (
     <Routes>

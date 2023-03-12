@@ -93,3 +93,28 @@ color: white;
 width: 50%;
 
   }
+  .productBtn {
+    width: 15rem;
+    margin: auto;
+    padding: 1rem 0;
+    box-sizing: border-box;
+    color: white;
+    background-color: #00abc5;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 700;
+    position: absolute;
+    right: 5rem;
+    top: 0;
+  }
+  .productBtnBox {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+  
+    position: relative;
+    margin-bottom: 5rem;
+  }

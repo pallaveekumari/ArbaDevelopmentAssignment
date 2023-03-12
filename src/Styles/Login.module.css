@@ -1,6 +1,6 @@
 .loginMainBox{
     height: 35rem;
-    width: 55%;
+    width: 70%;
     /* border: 1px solid red; */
     display: grid;
     grid-template-columns: repeat(2,1fr);
@@ -10,16 +10,15 @@ gap: 4rem;
 }
 
 .loginImageBox{
-    /* height: 35rem; */
-  
-    /* border: 1px solid red; */
+   
     background-image: url(https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg);
+    width: 110%;
 }
 .loginFormBox{
-    /* height: 35rem; */
-    width: 65%;
+   
+    width: 80%;
 
-    /* border: 1px solid red;  */
+    
 }
 
 .loginCircle{
@@ -28,7 +27,7 @@ gap: 4rem;
     border-radius: 50%;
     /* border: 1px solid black; */
     margin: auto;
-    background-color: aqua;
+    background-color: #00abc5;
 }
 .user{
     display: flex;
@@ -39,13 +38,15 @@ gap: 4rem;
   
 }
 .loginbutton{
-    height: 1.5rem;
+    height: 2rem;
     width: 100%;
     /* border: 1px solid blue; */
     border-radius: 10px;
     color: aliceblue;
-    background-color: blue;
+    background-color: #00abc5;
     margin-top: 2rem;
     border: none;
-
+    padding: 0.5rem;
+    box-sizing: border-box;
+cursor: pointer;
 }

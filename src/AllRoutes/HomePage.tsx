@@ -7,6 +7,17 @@ import { handleAddToCart, homePageData } from "../Redux/AppReducer/action";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import Carousel from "../Components/Carousel";
+
+
+const images = [
+    'https://www.pngfind.com/pngs/m/620-6205611_banner-image-objectives-of-e-commerce-hd-png.png',
+    'https://img.favpng.com/1/3/6/web-development-e-commerce-business-digital-marketing-web-design-png-favpng-UnKvfvQbtLxaZUtnnwzBK7Ywj.jpg',
+    'https://www.pngfind.com/pngs/m/24-248789_ecommerce-website-development-e-commerce-banner-design-png.png',
+  ];
+
+
+
 
 const HomePage = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -38,6 +49,7 @@ const HomePage = () => {
       <Navbar />
       <h1>Home</h1>
       <div>
+        <Carousel images={images}/>
         {
           <DialogBox isOpen={isOpen} onClose={(e: any) => setIsOpen(false)}>
             <h1>Terms and Conditions</h1>

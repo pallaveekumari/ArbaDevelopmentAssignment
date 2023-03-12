@@ -5,9 +5,9 @@ import styles from "../Styles/Navbar.module.css";
 
 const Navbar = () => {
   const [bool, setBool] = useState<boolean>(false);
-const navigate=useNavigate()
-  const cartdata= useSelector((store:any)=>store.AppReducer.cartdata)
-console.log(cartdata)
+  const navigate = useNavigate();
+  const cartdata = useSelector((store: any) => store.AppReducer.cartdata);
+  console.log(cartdata);
   const handleToggle = (): void => {
     setBool(!bool);
   };
@@ -16,11 +16,11 @@ console.log(cartdata)
     <div className={styles.header}>
       <div className={styles.leftBox}>
         <Link to="/">
-        <img
-          className={styles.logo}
-          src="https://images.squarespace-cdn.com/content/v1/5e185abfc76307064fbf9623/1601657483135-2RZDLSDC83SZMJLWK1AY/Large+ArBa+Logo+2.PNG"
-          alt=""
-        />
+          <img
+            className={styles.logo}
+            src="https://images.squarespace-cdn.com/content/v1/5e185abfc76307064fbf9623/1601657483135-2RZDLSDC83SZMJLWK1AY/Large+ArBa+Logo+2.PNG"
+            alt=""
+          />
         </Link>
       </div>
       <div className={styles.rightBox}>
@@ -31,7 +31,7 @@ console.log(cartdata)
             alt=""
           />
           <Link to="/cartpage">
-          <div className={styles.cartItemCount}>{cartdata.length}</div>
+            <div className={styles.cartItemCount}>{cartdata.length}</div>
           </Link>
         </div>
         <div className={styles.dropdown}>
@@ -53,12 +53,16 @@ console.log(cartdata)
             }
             className={styles.dropdownMenu}
           >
-            <p onClick={()=>{
-                localStorage.removeItem("token")
-                navigate("/login")
-            }}>Logout</p>
-          <Link to="/profile">  <p>Profile</p></Link>
-            <p>Code Challenge</p>
+            <p
+              onClick={() => {
+                localStorage.removeItem("token");
+                navigate("/login");
+              }}
+            >
+              Logout
+            </p>
+            <p onClick={() => navigate("/profile")}>Profile</p>
+            <p onClick={() => navigate("/coding")}>Code Challenge</p>
           </div>
         </div>
       </div>

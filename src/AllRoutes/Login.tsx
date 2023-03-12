@@ -16,8 +16,10 @@ const Login = () => {
   const handleSubmit = (): any => {
     dispatch<any>(login({ username, password })).then((res: any) => {
       let token = localStorage.getItem("token");
+      console.log(token);
       if (token) {
         alert("Login Successfull");
+        console.log("hi");
         navigate("/");
       } else {
         alert("login failed");
@@ -54,7 +56,9 @@ const Login = () => {
           </button>
           <p>
             Don't have any account?{" "}
-            <Link to="/signup"><span style={{ color: "blue" }}>Sign Up</span></Link>
+            <Link to="/signup">
+              <span style={{ color: "blue" }}>Sign Up</span>
+            </Link>
           </p>
         </div>
       </div>

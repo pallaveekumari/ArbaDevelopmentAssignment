@@ -9,28 +9,41 @@ import HomePage from "./HomePage";
 import ProductHomePage from "./ProductHomePage";
 import ProfilePage from "./ProfilePage";
 
-import PrivateRoute from "./PrivateRoutes";
 import { login } from "../Redux/AuthReducer/action";
+import { PrivateRoute } from "./PrivateRoutes";
 
 const AllRoutes = () => {
-  const isAuthenticated: any = localStorage.getItem("token") != undefined;
+  //   console.log(isAuthenticated);
+
   return (
     <Routes>
-      {/* <Route path="/login" element={<Login/>}/> */}
       <Route path="/signup" element={<Signup />} />
-      {/* <PrivateRoute isAuthenticated={isAuthenticated} path="/login" component={HomePage} /> */}
+      <Route path="/login" element={<Login />} />
 
-      <Route><PrivateRoute exact path="/login" isAuthenticated={isAuthenticated}>
-        <HomePage />
-      </PrivateRoute>
-      </Route>
-      <Route path="/cartpage" element={<CartPage />} />
-      <Route path="/allproduct" element={<AllProductPage />} />
-      <Route path="/coding" element={<CodingChallengePage />} />
-      <Route path="/" element={<HomePage />} />
-      <Route path="/product" element={<ProductHomePage />} />
-      <Route path="/profile" element={<ProfilePage />} />
-      </Routes>
+      <Route
+        path="/"
+        element={<PrivateRoute component={HomePage} path={"/login"} />}
+      />
+
+      <Route
+        path="/profile"
+        element={<PrivateRoute component={ProfilePage} path={"/login"} />}
+      />
+      <Route
+        path="/coding"
+        element={
+          <PrivateRoute component={CodingChallengePage} path={"/login"} />
+        }
+      />
+      <Route
+        path="/allproduct"
+        element={<PrivateRoute component={AllProductPage} path={"/login"} />}
+      />
+      <Route
+        path="/cartpage"
+        element={<PrivateRoute component={CartPage} path={"/login"} />}
+      />
+    </Routes>
   );
 };
 

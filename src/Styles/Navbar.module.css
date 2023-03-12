@@ -107,3 +107,8 @@
       border-radius: 50%;
       
   }
+  .dropdownMenu>p{
+    text-decoration: none;
+    color:#57bcb7 ;
+    
+  }

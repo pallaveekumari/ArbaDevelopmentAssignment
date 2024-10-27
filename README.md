@@ -19,6 +19,15 @@ Hello Everyone !🌏 I am Pallavee Kumari and I am presenting my Project of Arba
 
 ## Screenshots
 
+- ### Login Page
+
+  ![App Screenshot](https://github.com/pallaveekumari/ArbaDevelopmentAssignment/blob/master/src/Screenshots/login.png?raw=true?raw=true?raw=true?raw=true)
+
+- ### Signup Page
+
+  ![App Screenshot](https://github.com/pallaveekumari/ArbaDevelopmentAssignment/blob/master/src/Screenshots/signup.png?raw=true?raw=true?raw=true?raw=true)
+
+
 - ### Home Page
 
   ![App Screenshot](https://github.com/pallaveekumari/ArbaDevelopmentAssignment/blob/master/src/Screenshots/HomePage.png?raw=true?raw=true?raw=true)
